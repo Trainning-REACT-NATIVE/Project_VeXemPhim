@@ -3,9 +3,9 @@ import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity, FlatList, 
 import { Entypo } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import dataI from '../data/dataFilm'
-import SliderItem from '../component/SliderItem'
+import SliderItem from '../component/CarouselItem/SliderItem'
 import dateII from '../data/dataCategories'
-import CategoriesItem from '../component/CategoriesItem'
+import CategoriesItem from '../component/CarouselItem/CategoriesItem'
 import { useNavigation } from '@react-navigation/native';
 
 const { width } = Dimensions.get('screen');
@@ -37,7 +37,7 @@ export default function Home() {
                     <Text style={{ color: 'white', fontSize: 18, fontWeight: 'bold', marginBottom: 10 }}>Hello Tom  <Entypo name="hand" size={24} color="yellow" /></Text>
                     <Text style={{ color: 'white', fontSize: 14 }}>Book your favorite movie</Text>
                 </View>
-                <Image source={require('../assets/avatar.jpg')} style={Styles.Avatar} />
+                <Image source={require('../assets/avatar.png')} style={Styles.Avatar} />
             </View>
 
             <View style={{ flex: 0.1, justifyContent: 'center' }}>
@@ -50,7 +50,7 @@ export default function Home() {
             <View style={{ flexDirection: 'row', flex: 0.08, justifyContent: 'space-around', alignItems: 'center', width: width }}>
                 <Text style={{ color: 'white' }}>Movie categories</Text>
                 <TouchableOpacity onPress = {onCategories}>
-                    <Text style={{ color: 'blue' }}>show more</Text>
+                    <Text style={{ color: '#0094FF', fontWeight: 'bold' }}>show more</Text>
                 </TouchableOpacity>
             </View>
 

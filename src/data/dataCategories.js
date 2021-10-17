@@ -6,42 +6,42 @@ export default Categories = [
     },
     {
         id: '2',
-        name: 'Comedy',
-        icon: require('../assets/icon.png')
+        name: 'Horror',
+        icon: require('../assets/shockface.png')
     },
     {
         id: '3',
-        name: 'Comedy',
-        icon: require('../assets/icon.png')
+        name: 'Romance',
+        icon: require('../assets/romanceface.png')
     },
     {
         id: '4',
-        name: 'Comedy',
-        icon: require('../assets/icon.png')
+        name: 'Action',
+        icon: require('../assets/action.png')
     },
     {
         id: '5',
-        name: 'Comedy',
-        icon: require('../assets/icon.png')
+        name: 'Science',
+        icon: require('../assets/science.png')
     },
     {
         id: '6',
-        name: 'Comedy',
-        icon: require('../assets/icon.png')
+        name: 'Drama',
+        icon: require('../assets/drama.png')
     },
     {
         id: '7',
-        name: 'Comedy',
-        icon: require('../assets/icon.png')
+        name: 'Adventure',
+        icon: require('../assets/adventure.jpg')
     },
     {
         id: '8',
-        name: 'Comedy',
-        icon: require('../assets/icon.png')
+        name: 'History',
+        icon: require('../assets/history.jpg')
     },
     {
         id: '9',
-        name: 'Comedy',
-        icon: require('../assets/icon.png')
+        name: 'War',
+        icon: require('../assets/war.png')
     },
 ]

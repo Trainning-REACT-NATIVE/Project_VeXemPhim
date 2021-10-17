@@ -2,7 +2,7 @@ export default ticket = [
     {
         id: '1',
         name: 'Joker',
-        cinema: 'Spider A Cinema',
+        cinema: 'Spider A Cinema, Thu Dau Mot, Binh duong',
         dd: '20',
         mm: '08',
         yy: '2021',
@@ -17,7 +17,7 @@ export default ticket = [
     {
         id: '2',
         name: 'Joker',
-        cinema: 'Spider A Cinema',
+        cinema: 'Spider A Cinema, Thu Dau Mot, Binh duong',
         dd: '20',
         mm: '08',
         yy: '2021',
@@ -32,7 +32,7 @@ export default ticket = [
     {
         id: '3',
         name: 'Joker',
-        cinema: 'Spider A Cinema',
+        cinema: 'Spider A Cinema, Thu Dau Mot, Binh duong',
         dd: '20',
         mm: '08',
         yy: '2021',
@@ -47,7 +47,7 @@ export default ticket = [
     {
         id: '4',
         name: 'Joker',
-        cinema: 'Spider A Cinema',
+        cinema: 'Spider A Cinema, Thu Dau Mot, Binh duong',
         dd: '20',
         mm: '08',
         yy: '2021',
@@ -62,7 +62,7 @@ export default ticket = [
     {
         id: '5',
         name: 'Joker',
-        cinema: 'Spider A Cinema',
+        cinema: 'Spider A Cinema, Thu Dau Mot, Binh duong',
         dd: '20',
         mm: '08',
         yy: '2021',
@@ -77,7 +77,7 @@ export default ticket = [
     {
         id: '6',
         name: 'Joker',
-        cinema: 'Spider A Cinema',
+        cinema: 'Spider A Cinema, Thu Dau Mot, Binh duong',
         dd: '20',
         mm: '08',
         yy: '2021',

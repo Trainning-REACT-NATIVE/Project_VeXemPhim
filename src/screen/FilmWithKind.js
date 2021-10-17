@@ -19,7 +19,7 @@ export default function FilmWithKind() {
 
     return (
         <View style={Styles.container}>
-            <View style={{flex: 0.1}}>
+            <View style={Styles.titleandback}>
                 <TitleAndBack 
                     onPress={onBack}
                     title={'Action Film'}
@@ -27,7 +27,7 @@ export default function FilmWithKind() {
                 />
             </View>
             
-            <View style={{flex: 0.9}}>
+            <View style={{flex: 1}}>
                 <FlatList 
                     data={data}
                     renderItem={({item}) => (
@@ -46,5 +46,10 @@ const Styles = StyleSheet.create({
     container: {
         backgroundColor: '#171723',
         flex: 1,
+        alignItems: 'center',
+    },
+    titleandback: {
+        height: 70,
+        width: '100%',
     }
 })

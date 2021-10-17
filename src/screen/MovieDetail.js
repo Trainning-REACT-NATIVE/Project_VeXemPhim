@@ -1,7 +1,7 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, FlatList, Text } from "react-native";
+import { View, StyleSheet, FlatList, Text } from "react-native";
 import data from "../data/dataFilm";
-import InfomationTicketsItem from "../component/InfomationTicketsItem";
+import InfomationTicketsItem from "../component/CarouselItem/InfomationTicketsItem";
 import Button from '../component/Button'
 import TitleAndBack from '../component/TitleAndBack'
 import { useNavigation } from "@react-navigation/native";
@@ -14,14 +14,12 @@ export default function MovieDetail() {
         uNavigation.goBack();
     }
 
+    const onClick = () => {
+        uNavigation.navigate('ChooseCinema');
+    }
+
     return (
         <View style={Styles.container}>
-            <StatusBar
-                translucent
-                backgroundColor={'transparent'}
-                barStyle={'light-content'}
-            />
-
             <FlatList
                 data={data}
                 renderItem={InfomationTicketsItem}
@@ -39,7 +37,7 @@ export default function MovieDetail() {
             </View>
 
             <View style={[Styles.no_body, { justifyContent: 'flex-end', bottom: 24 }]}>
-                <Button title={"Buy Ticket"} color={"#0094FF"} width={200} colorText={"white"} />
+                <Button title={"Buy Ticket"} color={"#0094FF"} width={200} colorText={"white"} onPress={onClick}/>
             </View>
         </View>
     )

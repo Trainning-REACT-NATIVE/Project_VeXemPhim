@@ -1,10 +1,11 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react'
-import { View, StyleSheet, KeyboardAvoidingView, StatusBar } from 'react-native'
+import { View, StyleSheet, KeyboardAvoidingView, Text } from 'react-native'
 import Logo from '../component/Logo'
 import BoxTextInput from '../component/BoxTextInput';
 import ButtonIcon from '../component/ButtonIcon';
 import Button from '../component/Button';
+import TitleAndBack from '../component/TitleAndBack';
 import { ScrollView } from 'react-native-gesture-handler';
 
 export default function SignIn() {
@@ -57,18 +58,15 @@ export default function SignIn() {
     return (
         <KeyboardAvoidingView style={Styles.container} behavior='height'>
             <ScrollView>
-                <StatusBar
-                    translucent
-                    backgroundColor={'transparent'}
-                    barStyle={'light-content'}
-                />
-
-                <View style={{ position: 'relative', margin: 20 }}>
-                    <ButtonIcon onPress={onBack} />
+                <View style={Styles.titleandback}>
+                    <TitleAndBack
+                        onPress={onBack}
+                        title={''}
+                        right={<Text></Text>}
+                    />
                 </View>
 
-
-                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: -16, marginBottom: 5 }}>
+                <View style={{ justifyContent: 'center', marginTop: -16, marginBottom: 5, width: '100%', alignItems: 'center' }}>
                     <Logo
                         name={' SPIDER '}
                         FontSize={64}
@@ -144,5 +142,9 @@ const Styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#171723',
+    },
+    titleandback: {
+        height: 70,
+        width: '100%',
     }
 })

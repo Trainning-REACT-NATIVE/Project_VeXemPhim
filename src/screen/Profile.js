@@ -12,7 +12,7 @@ export default function Profile() {
         <View style = {Styles.container} >
             <View style ={{paddingLeft: 24,flex: 1}}>
                 <View style = {{paddingLeft: 10, flexDirection: 'row', alignItems: 'center', flex: 0.3}} >
-                    <Image source={require('../assets/avatar.jpg')} style = {Styles.image} />
+                    <Image source={require('../assets/avatar.png')} style = {Styles.image} />
                     <View style = {{paddingLeft: 20, flexDirection: 'column'}} >
                         <Text style ={{fontSize: 18, fontWeight:'bold', color: 'white', paddingBottom: 5}}>Richard Tom</Text>
                         <Text style ={{fontSize: 14, color: '#0094FF'}}>Binh Duong, Viet Nam</Text>

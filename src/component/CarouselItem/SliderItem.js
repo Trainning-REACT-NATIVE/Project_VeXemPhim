@@ -5,7 +5,7 @@ const { width } = Dimensions.get('screen');
 
 export default function SliderItem({ item }) {
     return (
-        <View style={{ marginHorizontal: width / 4 }}>
+        <View style={{ marginHorizontal: width / 4 - 5 }}>
             <Image source={item.image} style={Styles.image} />
         </View>
     )
@@ -13,8 +13,8 @@ export default function SliderItem({ item }) {
 
 const Styles = StyleSheet.create({
     image: {
-        width: width / 2,
-        height: 250,
+        width: width / 2 + 10,
+        height: 300,
         borderWidth: 1,
         borderColor: 'white',
         borderRadius: 5,

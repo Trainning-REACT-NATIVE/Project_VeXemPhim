@@ -1,18 +1,23 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
-const {width,height} = Dimensions.get('screen');
+const {width} = Dimensions.get('screen');
 
 export default function FilmWithKindItem({item}) {
     return (
         <View style={Styles.container}>
-            <ImageBackground source={item.image} style={Styles.image}>
-                <View style={{justifyContent: 'space-between', height: '100%'}}>
-                    <Text style={Styles.star}><FontAwesome name="star" size={20} color="yellow" /> {item.star}</Text>
-                    <Text style={Styles.name}>{item.name}</Text>
-                </View>
-            </ImageBackground>
+            <Image 
+                source={item.image}
+                style={Styles.image}
+            />
+            <View style={Styles.boxstar}>
+                <FontAwesome name="star" size={14} color="black" />
+                <Text style={Styles.text}> {item.star}</Text>
+            </View>
+            <View style={Styles.boxname}>
+            <Text style={Styles.text}> {item.name}</Text>
+            </View>
         </View>
     )
 }
@@ -20,31 +25,51 @@ export default function FilmWithKindItem({item}) {
 const Styles = StyleSheet.create({
     container: {
         width: width/2,
-        height: height/2 - 24,
-        justifyContent: 'center',
-        alignItems: 'center',
-        paddingBottom: 6,
+        height: 250,
+        marginBottom: 20,
     },
     image: {
-        left: '2.5%',
-        width: '95%',
-        height: '95%',
+        width: width/2 - 20,
+        height: '100%',
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: 'white',
+        left: 10,
     },
-    star: {
-        top: 6,
-        left: 6,
-        backgroundColor: 'rgba(0,0,0,0.8)',
+    boxstar: {
+        backgroundColor: '#FFD600',
+        height: 30,
         width: 50,
-        height: 22,
-        borderRadius: 5,
-        color: 'yellow',
-        fontSize: 14,
-    },
-    name: {
-        color: 'white',
-        bottom: -12,
+        position: 'absolute',
         left: 6,
-        fontSize: 18,
+        bottom: 40,
+        borderRightWidth: 4,
+        borderTopWidth: 2,
+        borderColor: '#FF8A00',
+        borderTopRightRadius: 5,
+        borderBottomRightRadius: 5,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    boxname: {
+        backgroundColor: '#FFD600',
+        height: 30,
+        width: width/2 - 65,
+        position: 'absolute',
+        right: 4,
+        bottom: 25,
+        borderRightWidth: 4,
+        borderTopWidth: 2,
+        borderColor: '#FF8A00',
+        borderTopLeftRadius: 5,
+        borderBottomLeftRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    text: {
+        fontSize: 12,
         fontWeight: 'bold',
+        textTransform: 'uppercase',
     }
 })

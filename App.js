@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { StatusBar, StyleSheet, View } from 'react-native';
 import Index from './src/navigator/Index'
-import MovieDetail from './src/screen/MovieDetail';
-
 
 export default function App() {
   return (
-    <Index />
+    <View style={Styles.container}>
+      <StatusBar/>
+      <Index />
+    </View>
+
   );
 }
+
+const Styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  }
+})

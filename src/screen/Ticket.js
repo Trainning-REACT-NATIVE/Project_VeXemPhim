@@ -1,10 +1,18 @@
 import React from 'react'
-import { StyleSheet, ScrollView, FlatList, SafeAreaView } from 'react-native'
+import { StyleSheet, FlatList, SafeAreaView, Pressable } from 'react-native'
 import dataI from '../data/dataTicketOn'
 import dataII from '../data/dataTicketOff'
 import TicketItem from '../component/CarouselItem/TicketItem'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Ticket() {
+
+    const uNavigation = useNavigation();
+
+    const onClick = () => {
+        uNavigation.navigate('CheckinTicket');
+    }
+
     return (
         <SafeAreaView style={Styles.container}>
             <FlatList
@@ -12,7 +20,15 @@ export default function Ticket() {
                     return (
                         <FlatList
                             data={dataI}
-                            renderItem={TicketItem}
+                            renderItem={({ item }) => (
+                                <Pressable onPress={onClick}>
+                                    <TicketItem
+                                        item={item}
+                                        colorss={'#2F5D62'}
+                                        boxwidth={80}
+                                    />
+                                </Pressable>
+                            )}
                             keyExtractor={item => item.id}
                             showsVerticalScrollIndicator={false}
                         />
@@ -22,7 +38,12 @@ export default function Ticket() {
                     return (
                         <FlatList
                             data={dataII}
-                            renderItem={TicketItem}
+                            renderItem={({ item }) => (
+                                <TicketItem
+                                    item={item}
+                                    colorss={'#865454'}
+                                    boxwidth={80}
+                                />)}
                             keyExtractor={item => item.id}
                             showsVerticalScrollIndicator={false}
                         />
@@ -40,6 +61,6 @@ const Styles = StyleSheet.create({
         backgroundColor: '#171723',
         flex: 1,
         alignItems: 'center',
-        paddingTop: 24,
+        paddingTop: 32,
     }
 })

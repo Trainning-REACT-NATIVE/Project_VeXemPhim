@@ -42,12 +42,6 @@ export default function SignIn() {
     return (
         <KeyboardAvoidingView style={Styles.container} behavior='height'>
             <ScrollView>
-                <StatusBar
-                    translucent
-                    backgroundColor={'transparent'}
-                    barStyle={'light-content'}
-                />
-
                 <View style={{ justifyContent: 'center', alignItems: 'center', marginVertical: 50 }}>
                     <Logo 
                         name={' SPIDER '} 

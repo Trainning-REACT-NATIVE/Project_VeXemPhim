@@ -1,9 +1,9 @@
 import React from 'react'
 import { View, StyleSheet, Dimensions, FlatList } from 'react-native'
 import dataI from '../data/dateEvent'
-import EventItem from '../component/EventItem'
+import EventItem from '../component/CarouselItem/EventItem'
 import dataII from '../data/dataBirthday'
-import EventHappyBirthdayItem from '../component/EventHappyBirthdayItem'
+import EventHappyBirthdayItem from '../component/CarouselItem/EventHappyBirthdayItem'
 
 const { width } = Dimensions.get('screen');
 

@@ -5,11 +5,24 @@ import { Ionicons } from '@expo/vector-icons';
 export default function TitleAndBack({ onPress, title, right }) {
     return (
         <View style={Styles.container}>
-            <TouchableOpacity onPress={onPress}>
-                <Ionicons name="chevron-back-outline" size={24} color="#0094FF" />
+            <TouchableOpacity onPress={onPress} style={{ 
+                    left: 30, 
+                    height: 50, 
+                    width: 50, 
+                    justifyContent: 'center', 
+                    alignItems: 'center', 
+                    backgroundColor: 'rgba(255,255,255,0.3)',
+                    borderRadius: 10,
+                }}>
+                <Ionicons name="chevron-back-outline" size={24} color="white" />
             </TouchableOpacity>
-            <Text style={{ color: "#0094FF", fontSize: 14, fontWeight: 'bold', backgroundColor: 'rgba(23,23,35,0.3)', paddingVertical: 2 }}>{title}</Text>
-            {right}
+            <View style={{ width: '100%', alignItems: 'center', position: 'absolute', height: 70, justifyContent: 'center' }}>
+                <Text style={{ color: "white", fontSize: 14, fontWeight: 'bold', backgroundColor: 'rgba(23,23,35,0.3)' }}>{title}</Text>
+            </View>
+
+            <View style={{ right: 30, position: 'absolute', width: '100%' }}>
+                {right}
+            </View>
         </View>
     )
 }
@@ -17,10 +30,8 @@ export default function TitleAndBack({ onPress, title, right }) {
 const Styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        justifyContent: 'space-around',
         alignItems: 'center',
-        width: '80%',
-        marginHorizontal: '10%',
-        marginTop: 30,
+        width: '100%',
+        height: 70,
     }
 })
