@@ -14,12 +14,13 @@ import CheckinTicket from '../screen/CheckinTicket';
 import ChooseCinema from '../screen/ChooseCinema';
 import ChooseSeats from '../screen/ChooseSeats';
 import ChooseCombo from '../screen/ChooseCombo';
+import CodeRegister from '../screen/CodeRegister';
 
 const Stack = createStackNavigator();
 export default function Root() {
     return (
         <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName='SignIn'>
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName='SingIn'>
                 <Stack.Screen name={'SingIn'} component={SignIn} />
                 <Stack.Screen name={'Register'} component={Register} />
                 <Stack.Screen name={'Tabs'} component={Tabs} />
@@ -32,6 +33,7 @@ export default function Root() {
                 <Stack.Screen name={'ChooseCinema'} component={ChooseCinema} />
                 <Stack.Screen name={'ChooseSeats'} component={ChooseSeats} />
                 <Stack.Screen name={'ChooseCombo'} component={ChooseCombo} />
+                <Stack.Screen name={'CodeRegister'} component={CodeRegister} />
             </Stack.Navigator>
         </NavigationContainer>
     );
